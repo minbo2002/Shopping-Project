@@ -18,6 +18,10 @@ target/
 *.iws
 *.iml
 *.ipr
+pom.xml
+application.properties
+jQuery-2.1.4.min.js
+style.css
 
 ### NetBeans ###
 /nbproject/private/
