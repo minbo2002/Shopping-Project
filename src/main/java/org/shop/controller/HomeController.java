@@ -12,7 +12,7 @@ import java.util.Locale;
 @Controller
 public class HomeController {
 
-    @GetMapping
+    @GetMapping("/")
     public String home(Locale locale, Model model) {
 
         LocalDateTime now = LocalDateTime.now();
