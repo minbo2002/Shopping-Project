@@ -33,4 +33,14 @@
                  reg_date DESC
     </select>
 
+    <select id="read" resultType="CodeGroup">
+        SELECT group_code,
+               group_name,
+               use_yn,
+               reg_date,
+               upd_date
+        FROM code_group
+        WHERE group_code = #{groupCode}
+    </select>
+
 </mapper>

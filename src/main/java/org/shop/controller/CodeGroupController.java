@@ -44,4 +44,12 @@ public class CodeGroupController {
 
         model.addAttribute("list", list);
     }
+
+    @GetMapping("/read")
+    public void read(String groupCode, Model model) throws Exception {
+
+        CodeGroup read = service.read(groupCode);
+
+        model.addAttribute(read);
+    }
 }
