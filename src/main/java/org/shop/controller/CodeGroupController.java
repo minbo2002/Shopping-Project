@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import java.util.List;
+
 @RequiredArgsConstructor
 @Controller
 @RequestMapping("/codegroup")
@@ -33,5 +35,13 @@ public class CodeGroupController {
         rttr.addFlashAttribute("msg", "SUCCESS");
 
         return "redirect:/codegroup/list";
+    }
+
+    @GetMapping("/list")
+    public void list(Model model) throws Exception {
+
+        List<CodeGroup> list = service.list();
+
+        model.addAttribute("list", list);
     }
 }

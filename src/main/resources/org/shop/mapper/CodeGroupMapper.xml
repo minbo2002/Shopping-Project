@@ -22,28 +22,6 @@
             )
     </insert>
 
-    <select id="read" resultType="CodeGroup">
-        SELECT group_code,
-               group_name,
-               use_yn,
-               reg_date,
-               upd_date
-        FROM code_group
-        WHERE group_code = #{groupCode}
-    </select>
-
-    <update id="update">
-        UPDATE code_group
-        SET group_name = #{groupName},
-            upd_date = now()
-        WHERE group_code = #{groupCode}
-    </update>
-
-    <delete id="delete">
-        DELETE FROM code_group
-        WHERE group_code = #{groupCode}
-    </delete>
-
     <select id="list" resultType="CodeGroup">
         SELECT group_code,
                group_name,
