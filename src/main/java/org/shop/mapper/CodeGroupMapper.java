@@ -11,4 +11,6 @@ public interface CodeGroupMapper {
     public List<CodeGroup> list() throws Exception;
 
     public CodeGroup read(String groupCode) throws Exception;
+
+    public void update(CodeGroup codeGroup) throws Exception;
 }

@@ -43,4 +43,11 @@
         WHERE group_code = #{groupCode}
     </select>
 
+    <update id="update">
+        UPDATE code_group
+        SET group_name = #{groupName},
+            upd_date = now()
+        WHERE group_code = #{groupCode}
+    </update>
+
 </mapper>

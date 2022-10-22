@@ -52,4 +52,22 @@ public class CodeGroupController {
 
         model.addAttribute(read);
     }
+
+    @GetMapping("/modify")
+    public void modifyFrom(String groupCode, Model model) throws Exception {
+
+        CodeGroup read = service.read(groupCode);
+
+        model.addAttribute(read);
+    }
+
+    @PostMapping("/modify")
+    public String modify(CodeGroup codeGroup, RedirectAttributes rttr) throws Exception {
+
+        service.modify(codeGroup);
+
+        rttr.addFlashAttribute("msg", "SUCCESS");
+
+        return "redirect:/codegroup/list";
+    }
 }

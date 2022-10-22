@@ -11,4 +11,6 @@ public interface CodeGroupService {
     public List<CodeGroup> list() throws Exception;
 
     public CodeGroup read(String groupCode) throws Exception;
+
+    public void modify(CodeGroup codeGroup) throws Exception;
 }

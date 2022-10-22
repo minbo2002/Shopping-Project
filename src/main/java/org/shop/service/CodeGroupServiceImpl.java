@@ -27,4 +27,9 @@ public class CodeGroupServiceImpl implements CodeGroupService {
     public CodeGroup read(String groupCode) throws Exception {
         return mapper.read(groupCode);
     }
+
+    @Override
+    public void modify(CodeGroup codeGroup) throws Exception {
+        mapper.update(codeGroup);
+    }
 }
