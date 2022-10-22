@@ -13,4 +13,6 @@ public interface CodeGroupMapper {
     public CodeGroup read(String groupCode) throws Exception;
 
     public void update(CodeGroup codeGroup) throws Exception;
+
+    public void delete(String groupCode) throws Exception;
 }

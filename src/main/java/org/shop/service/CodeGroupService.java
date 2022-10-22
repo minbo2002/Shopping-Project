@@ -13,4 +13,6 @@ public interface CodeGroupService {
     public CodeGroup read(String groupCode) throws Exception;
 
     public void modify(CodeGroup codeGroup) throws Exception;
+
+    public void delete(String groupCode) throws Exception;
 }

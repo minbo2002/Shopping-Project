@@ -50,4 +50,9 @@
         WHERE group_code = #{groupCode}
     </update>
 
+    <delete id="delete">
+        DELETE FROM code_group
+        WHERE group_code = #{groupCode}
+    </delete>
+
 </mapper>

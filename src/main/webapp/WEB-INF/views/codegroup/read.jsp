@@ -35,7 +35,7 @@
             var groupCode = $("#groupCode");
             var groupCodeVal = groupCode.val();
 
-            self.location = "modify?groupCode=" + groupCodeVal;
+            self.location = "modify?groupCode="+groupCodeVal;
         });
 
         $("#btnRemove").on("click", function() {
